@@ -12,14 +12,13 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 try{
 sendslacknotifications("STARTED")
 stage('CheckoutCode'){
-git branch: 'development', credentialsId: 'd282f55b-fad5-4318-87d4-7ae8a1bf92b2', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+git branch: 'development', credentialsId: 'f6ab9cf8-44b5-40c9-9039-dd590d6db530', url: 'https://github.com/bhuvi-devops-course/maven-web-application.git'
 }
 
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
 
-  /*
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
@@ -29,7 +28,6 @@ sshagent(['c45c84b6-58f3-4971-a32b-5a90a17cbe0b']){
 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.25.205:/opt/apache-tomcat-9.0.68/webapps"
 }
 }
-*/
 }//try closing
 catch(e){
 currentBuild.result = "FAILURE"
@@ -64,7 +62,7 @@ def sendslacknotifications(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary, channel: "#walmart")
+  slackSend (color: colorCode, message: summary, channel: "#jenkinsbuild-notifications")
 }
 
 
