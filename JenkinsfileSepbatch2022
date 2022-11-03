@@ -7,12 +7,12 @@ echo "Build number: ${env.BUILD_NUMBER}"
 echo "Node name is: ${env.NODE_NAME}"
 
 
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '8')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
 
 try{
 sendslacknotifications("STARTED")
 stage('CheckoutCode'){
-git branch: 'development', credentialsId: 'd282f55b-fad5-4318-87d4-7ae8a1bf92b2', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+git branch: 'development', url: 'https://github.com/bhuvaneswaribhoopal/maven-web-application.git'
 }
 
 stage('Build'){
@@ -34,6 +34,7 @@ sshagent(['edb68cd9-21f4-4bb5-a6ae-2bd936f65b53']) {
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.16.144:/opt/apache-tomcat-9.0.68/webapps/"  
 }
 }
+
 */
 }//try closing
 catch(e){
