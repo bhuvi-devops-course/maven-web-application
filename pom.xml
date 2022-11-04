@@ -107,7 +107,6 @@
               <id>nexus</id>
               <name>wallmart Releases Nexus Repository</name>
               <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-release/</url>
-		   <username>admin</username>
 		<password>passw0rd</password>
             </repository>
 
@@ -116,7 +115,6 @@
               <id>nexus</id>
               <name>Wallmart Snapshot Nexus Repository </name>
               <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-snapshot//</url>
-		    <username>admin</username>
 		<password>passw0rd</password>
             </snapshotRepository>
 
