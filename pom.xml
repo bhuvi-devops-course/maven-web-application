@@ -113,7 +113,7 @@
 	    <snapshotRepository>
               <id>nexus</id>
               <name>Wallmart Snapshot Nexus Repository </name>
-              <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-snapshot//</url>
+              <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-snapshot/</url>
             </snapshotRepository>
 
 	    
