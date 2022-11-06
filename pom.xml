@@ -32,7 +32,7 @@
 <repository>
 <id>nexus</id>
 <name>remote repo</name>
-<url>http://172.31.34.67:7784/mithunITcourses/repository/grouprepo-software/</url>
+<url>http://13.40.78.193:7784/mithunITcourses/repository/grouprepo-software/</url>
 </repository>
 </repositories>
 
@@ -106,14 +106,14 @@
 	    <repository>
               <id>nexus</id>
               <name>wallmart Releases Nexus Repository</name>
-              <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-release/</url>
+              <url>http://13.40.78.193:7784/mithunITcourses/repository/wallmart-release/</url>
             </repository>
 
 	    
 	    <snapshotRepository>
               <id>nexus</id>
               <name>Wallmart Snapshot Nexus Repository </name>
-              <url>http://35.178.103.222:7784/mithunITcourses/repository/wallmart-snapshot/</url>
+              <url>http://13.40.78.193:7784/mithunITcourses/repository/wallmart-snapshot/</url>
             </snapshotRepository>
 
 	    
