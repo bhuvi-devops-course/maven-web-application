@@ -31,7 +31,7 @@
 <repositories>
 <repository>
 <id>nexus</id>
-<name>(beforeremote) proxy repo</name>
+<name>proxy repo</name>
 <url>http://18.132.12.240:8081/repository/grouprepo/</url>
 </repository>
 </repositories>
